@@ -1,6 +1,19 @@
 #!/usr/bin/env node
 
+var fs = require('fs');
 var cli = require('../lib/opencc-cli.js');
 var t2s = cli.t2s;
+var arg2 = process.argv[2];
+var file = require('../package.json');
 
-console.log(t2s(process.argv[2]));
+if (arg2) {
+    if (arg2 === '-v') {
+        console.log(file.version);
+    } else if (arg2 === '-h') {
+        console.log("Usage: s2t string");
+    } else {
+        console.log(t2s(process.argv[2]));
+    }
+} else {
+    console.log("Usage: s2t string");
+}
