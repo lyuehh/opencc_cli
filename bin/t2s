@@ -10,7 +10,7 @@ if (arg2) {
     if (arg2 === '-v') {
         console.log(file.version);
     } else if (arg2 === '-h') {
-        console.log("Usage: s2t string");
+        console.log("Usage: t2s string");
     } else {
         console.log(t2s(process.argv[2]));
     }
