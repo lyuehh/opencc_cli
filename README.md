@@ -3,24 +3,16 @@
 opencc cli, for command line.
 
 ## Getting Started
-Install the module with: `npm install opencc-cli`
+Install the module with: `npm install -g opencc-cli`,
+then your can use it in the terminal:
 
-```javascript
-var opencc-cli = require('opencc-cli');
-opencc-cli.awesome(); // "awesome"
 ```
+$ s2t 我爱你
+我愛你
 
-## Documentation
-_(Coming soon)_
-
-## Examples
-_(Coming soon)_
-
-## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
-
-## Release History
-_(Nothing yet)_
+$ t2s 我愛你
+我爱你
+```
 
 ## License
 Copyright (c) 2013 lyuehh. Licensed under the MIT license.
