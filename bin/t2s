@@ -12,7 +12,8 @@ if (arg2) {
     } else if (arg2 === '-h') {
         console.log("Usage: t2s string");
     } else {
-        console.log(t2s(process.argv[2]));
+        process.argv.splice(0,2);
+        console.log(t2s(process.argv.join('\n')));
     }
 } else {
     console.log("Usage: s2t string");

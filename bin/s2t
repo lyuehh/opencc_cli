@@ -6,13 +6,15 @@ var s2t = cli.s2t;
 var arg2 = process.argv[2];
 var file = require('../package.json');
 
+
 if (arg2) {
     if (arg2 === '-v') {
         console.log(file.version);
     } else if (arg2 === '-h') {
         console.log("Usage: s2t string");
     } else {
-        console.log(s2t(process.argv[2]));
+        process.argv.splice(0,2);
+        console.log(s2t(process.argv.join('\n')));
     }
 } else {
     console.log("Usage: s2t string");
